@@ -77,7 +77,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kk0-uh-3Eo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kk0-uh-3Eo">
                                 <rect key="frame" x="30" y="181" width="540" height="409"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSs-L1-L00">
@@ -89,6 +89,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Kk0-uh-3Eo" firstAttribute="top" secondItem="cc2-79-XCa" secondAttribute="bottom" constant="10.5" id="FEt-Vq-3Vo"/>
                             <constraint firstItem="cc2-79-XCa" firstAttribute="leading" secondItem="7Qi-mx-sTT" secondAttribute="leadingMargin" constant="15" id="LJW-Bj-Ghm"/>
                             <constraint firstItem="5Sa-DM-A9U" firstAttribute="top" secondItem="nSs-L1-L00" secondAttribute="bottom" constant="5" id="Pso-ET-hk8"/>
                             <constraint firstItem="Kk0-uh-3Eo" firstAttribute="top" secondItem="cc2-79-XCa" secondAttribute="bottom" constant="10" id="UQy-0j-O7f"/>
@@ -105,6 +106,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="cc2-79-XCa" secondAttribute="trailing" constant="15" id="scX-oa-eNn"/>
                             <constraint firstItem="Zdm-i2-oz9" firstAttribute="leading" secondItem="7Qi-mx-sTT" secondAttribute="leadingMargin" constant="15" id="tv1-L5-fci"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UQy-0j-O7f"/>
+                                <exclude reference="ciQ-vf-uV6"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="dateLastSeenLabel" destination="cc2-79-XCa" id="uX6-Ih-WA7"/>
