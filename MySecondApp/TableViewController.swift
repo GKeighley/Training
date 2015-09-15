@@ -101,11 +101,7 @@ class TableViewController: UITableViewController {
             destinationViewController.animal = selectedAnimal  
         }
     }
-   
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-       //performSegueWithIdentifier(GotoAnimal, self)
-        //itemId[1] - Item Id
-    }
+ 
 
 
 }
