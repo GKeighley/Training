@@ -23,6 +23,14 @@ class AnimalViewController: UIViewController {
             let imageData = NSData(contentsOfURL: url) {
                 self.imageView.image = UIImage(data:imageData)
         }
+        
+        // Refresh labels with ImaginaryAnimal members:
+        nameLabel.text          = animal?.name
+        heightLabel.text        = animal?.height.description    // Cast fro float
+        locationLabel.text      = animal?.location
+        dateLastSeenLabel.text  = animal?.dateLastSeen
+        
+        
 
         // Do any additional setup after loading the view.
     }
