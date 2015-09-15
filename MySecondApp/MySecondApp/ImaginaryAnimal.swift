@@ -31,5 +31,5 @@ struct ImaginaryAnimal
             imageURL = NSURL(string: imageURLString)
         }
         
-        }
+    }
 }

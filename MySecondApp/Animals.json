@@ -4,7 +4,7 @@
  "height": 1.5,
  "location": "Oceans",
  "dateLastSeen": "1858",
- "imageURLString": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Waterhouse_a_mermaid.jpg"},
+ "imageURL": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Waterhouse_a_mermaid.jpg"},
  
  {
  "name": "Loch Ness Monster",
@@ -17,8 +17,8 @@
  "name":"Bigfoot",
  "height": 2.1,
  "location": "North America",
- "dateLastSeen": "1963"
- },
+ "dateLastSeen": "1963",
+ "imageURL": "https://upload.wikimedia.org/wikipedia/en/9/99/Patterson–Gimlin_film_frame_352.jpg"},
  
  {
  "name":"Ogopogo",
