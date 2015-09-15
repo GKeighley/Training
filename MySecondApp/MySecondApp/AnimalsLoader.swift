@@ -11,17 +11,25 @@ import Foundation
 struct AnimalsLoader {
     func loadAnimals() -> [ImaginaryAnimal]{
         
-        let mermaid = ImaginaryAnimal(name:"Mermaid", height:1.5, location:"Oceans", dateLastSeen:"1894",
-            imageURL:NSURL(string:"https://upload.wikimedia.org/wikipedia/commons/5/55/John_William_Waterhouse_A_Mermaid.jpg"))
+        var animalsArray = [ImaginaryAnimal]()
         
-        let nessie = ImaginaryAnimal(name:"Nessie", height:1.5, location:"Oceans", dateLastSeen:"1894",
-            imageURL:NSURL(string:"https://upload.wikimedia.org/wikipedia/en/5/5e/Hoaxed_photo_of_the_Loch_Ness_monster.jpg"))
+        guard let url = NSBundle.mainBundle().URLForResource("Animals", withExtension: "json"),
+            let data = NSData(contentsOfURL: url),
+            let jsonArray = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0)) as? [AnyObject] else {
+               return animalsArray
+        }
+    
         
-        let bigfoot = ImaginaryAnimal(name:"Bigfoot", height:1.5, location:"Oceans", dateLastSeen:"1894",
-            imageURL:NSURL(string:"https://upload.wikimedia.org/wikipedia/en/9/99/Patterson%E2%80%93Gimlin_film_frame_352.jpg"))
+        if let jsonArray:[AnyObject] = jsonArray {
+            for animalJson in jsonArray {
+                
+                if let animal = ImaginaryAnimal(fromJSON: animalJson){
+                    animalsArray.append(animal)
+                }
         
-        let tahoeTessie = ImaginaryAnimal(name:"Tahoe Tessie", height:4.5, location:"Lake Tahoe", dateLastSeen:"1948", imageURL:NSURL(string:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzMTNvupsi6x7kUBTTHmHKTIamX6YuvYWRPTgqEF7rz2IU-oUN"))
-        
-        return [mermaid, bigfoot, nessie, tahoeTessie]
+            }
+        }
+       return animalsArray
     }
+
 }
