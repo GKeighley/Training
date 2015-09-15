@@ -16,6 +16,7 @@
 		C7B7F8911BA781B600621E1E /* ImaginaryAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8901BA781B600621E1E /* ImaginaryAnimal.swift */; settings = {ASSET_TAGS = (); }; };
 		C7B7F8931BA7882500621E1E /* AnimalsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8921BA7882500621E1E /* AnimalsLoader.swift */; settings = {ASSET_TAGS = (); }; };
 		C7B7F8951BA78B8800621E1E /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8941BA78B8800621E1E /* AnimalViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C7B7F8971BA88D6900621E1E /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = C7B7F8961BA88D6900621E1E /* Animals.json */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		C7B7F8901BA781B600621E1E /* ImaginaryAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImaginaryAnimal.swift; sourceTree = "<group>"; };
 		C7B7F8921BA7882500621E1E /* AnimalsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsLoader.swift; sourceTree = "<group>"; };
 		C7B7F8941BA78B8800621E1E /* AnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		C7B7F8961BA88D6900621E1E /* Animals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animals.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				C7B7F8741BA778A200621E1E /* Info.plist */,
 				C7B7F8901BA781B600621E1E /* ImaginaryAnimal.swift */,
 				C7B7F8921BA7882500621E1E /* AnimalsLoader.swift */,
+				C7B7F8961BA88D6900621E1E /* Animals.json */,
 			);
 			path = MySecondApp;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B7F8731BA778A200621E1E /* LaunchScreen.storyboard in Resources */,
+				C7B7F8971BA88D6900621E1E /* Animals.json in Resources */,
 				C7B7F8701BA778A200621E1E /* Assets.xcassets in Resources */,
 				C7B7F86E1BA778A200621E1E /* Main.storyboard in Resources */,
 			);
@@ -397,6 +401,7 @@
 				C7B7F8841BA778A200621E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7B7F8851BA778A200621E1E /* Build configuration list for PBXNativeTarget "MySecondAppTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +410,7 @@
 				C7B7F8871BA778A200621E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
