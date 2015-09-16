@@ -35,7 +35,7 @@ class AnimalViewController: UIViewController {
 
         print("About to load URL \(self.animal?.imageURL)")
             
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+        NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
             
             if let url = self.animal?.imageURL,
             let imageData = NSData(contentsOfURL: url) {
