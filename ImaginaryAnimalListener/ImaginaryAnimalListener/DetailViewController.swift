@@ -25,13 +25,10 @@ class DetailViewController: UIViewController {
         //self.heightLabel.text = animal?.height.description
         self.heightLabel.text = "\(animal?.height)"
         self.lastSeenByLabel.text = animal?.dateLastSeen
+        loadImage()
 
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        loadImage()
-    }
     
     func loadImage() {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)){
