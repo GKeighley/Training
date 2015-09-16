@@ -30,19 +30,20 @@ class AnimalViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+ 
     func loadImage() {
-
-        print("About to load URL \(self.animal?.imageURL)")
-            
-        NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
-            
-            if let url = self.animal?.imageURL,
-            let imageData = NSData(contentsOfURL: url) {
+        
+        if let url = self.animal?.imageURL {
+            let op = LoadAnimalOperation(animalUrl: url)
+            op.completionBlock =  ({
                 
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.imageView.image = UIImage(data: imageData)
-                })}
+                NSOperationQueue.mainQueue().addOperationWithBlock{ () -> Void in
+                    self.imageView.image = UIImage(data: op.imgData!)
+                }
+                
+            })
+            let operationQueue = NSOperationQueue.mainQueue()
+            operationQueue.addOperation(op)
         }
     }
 }

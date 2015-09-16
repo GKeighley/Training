@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3198A0D11BA9F163001BCA77 /* LoadAnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3198A0D01BA9F163001BCA77 /* LoadAnimalOperation.swift */; settings = {ASSET_TAGS = (); }; };
 		C7B7F8691BA778A200621E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8681BA778A200621E1E /* AppDelegate.swift */; };
 		C7B7F86E1BA778A200621E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B7F86C1BA778A200621E1E /* Main.storyboard */; };
 		C7B7F8701BA778A200621E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B7F86F1BA778A200621E1E /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3198A0D01BA9F163001BCA77 /* LoadAnimalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAnimalOperation.swift; sourceTree = "<group>"; };
 		C7B7F8651BA778A200621E1E /* MySecondApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySecondApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B7F8681BA778A200621E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7B7F86D1BA778A200621E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				C7B7F8901BA781B600621E1E /* ImaginaryAnimal.swift */,
 				C7B7F8921BA7882500621E1E /* AnimalsLoader.swift */,
 				C7B7F8961BA88D6900621E1E /* Animals.json */,
+				3198A0D01BA9F163001BCA77 /* LoadAnimalOperation.swift */,
 			);
 			path = MySecondApp;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B7F8951BA78B8800621E1E /* AnimalViewController.swift in Sources */,
+				3198A0D11BA9F163001BCA77 /* LoadAnimalOperation.swift in Sources */,
 				C7B7F8691BA778A200621E1E /* AppDelegate.swift in Sources */,
 				C7B7F88F1BA77B2300621E1E /* TableViewController.swift in Sources */,
 				C7B7F8931BA7882500621E1E /* AnimalsLoader.swift in Sources */,
