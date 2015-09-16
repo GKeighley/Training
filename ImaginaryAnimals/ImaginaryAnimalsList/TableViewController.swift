@@ -13,16 +13,6 @@ class TableViewController: UITableViewController {
     var animalsArray:[ImaginaryAnimal]
     
     required init?(coder aDecoder: NSCoder) {
-
-//        let testAnimal = ImaginaryAnimal(name: "Mermaid",
-//            height: 1.5,
-//            location: "Oceans",
-//            dateLastSeen: "1858",
-//            imageURL: nil
-//        )
-//        testAnimal.name = "Mermaid"
-        
-//        animalsArray = [testAnimal]
         animalsArray = AnimalsLoader().loadAnimals()
         super.init(coder: aDecoder)
     }

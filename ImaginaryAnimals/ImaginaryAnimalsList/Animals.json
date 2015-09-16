@@ -47,6 +47,14 @@
  "location": "Central Asia",
  "dateLastSeen": "1887",
  "imageURL": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Vegetable_lamb_%28Lee%2C_1887%29.jpg"
+ },
+ 
+ {
+ "name": "Lorax",
+ "height": 0.3,
+ "location": "Near Truffula Trees",
+ "dateLastSeen": "March 2 2012",
+ "imageURL": "https://vignette1.wikia.nocookie.net/lorax/images/5/5d/The-lorax-400.png/revision/latest?cb=20131006121451"
  }
  
  ]
