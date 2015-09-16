@@ -25,43 +25,24 @@ class AnimalViewController: UIViewController {
         heightLabel.text        = animal?.height.description    // Cast fro float
         locationLabel.text      = animal?.location
         dateLastSeenLabel.text  = animal?.dateLastSeen
-        
-        
+
+        loadImage()
 
         // Do any additional setup after loading the view.
     }
     
     func loadImage() {
+
+        print("About to load URL \(self.animal?.imageURL)")
+            
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
             
             if let url = self.animal?.imageURL,
             let imageData = NSData(contentsOfURL: url) {
-                self.imageView.image = UIImage(data: imageData)
-            }
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.imageView.image = UIImage(data: imageData)
+                })}
         }
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-    
-        loadImage()
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
