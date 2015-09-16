@@ -19,10 +19,6 @@ class AnimalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let url = animal?.imageURL,
-            let imageData = NSData(contentsOfURL: url) {
-                self.imageView.image = UIImage(data:imageData)
-        }
         
         // Refresh labels with ImaginaryAnimal members:
         nameLabel.text          = animal?.name
@@ -33,6 +29,23 @@ class AnimalViewController: UIViewController {
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    func loadImage() {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+            
+            if let url = self.animal?.imageURL,
+            let imageData = NSData(contentsOfURL: url) {
+                self.imageView.image = UIImage(data: imageData)
+            }
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    
+        loadImage()
+        
     }
 
     override func didReceiveMemoryWarning() {
