@@ -9,6 +9,10 @@
 import XCTest
 @testable import MySecondApp
 
+struct TestAnimalsLoader : AnimalsLoader {
+    var url:NSURL? = NSBundle.mainBundle().URLForResource("Animals", withExtension: "json")
+}
+
 class MySecondAppTests: XCTestCase {
     
     override func setUp() {

@@ -8,12 +8,18 @@
 
 import Foundation
 
-struct AnimalsLoader {
+protocol AnimalsLoader {
+    func loadAnimals() -> [ImaginaryAnimal]
+    var url: NSURL? { get }
+}
+
+extension AnimalsLoader {
     func loadAnimals() -> [ImaginaryAnimal]{
         
         var animalsArray = [ImaginaryAnimal]()
         
-        guard let url = NSBundle.mainBundle().URLForResource("Animals", withExtension: "json"),
+        guard let url = self.url, // NSURL(string: "http://charliewilliams.org/SwiftBootcamp/Animals.json"),
+        //NSBundle.mainBundle().URLForResource("Animals", withExtension: "json"),
             let data = NSData(contentsOfURL: url),
             let jsonArray = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0)) as? [AnyObject] else {
                return animalsArray

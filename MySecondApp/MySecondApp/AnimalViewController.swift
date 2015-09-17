@@ -15,7 +15,7 @@ class AnimalViewController: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLastSeenLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: URLImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,25 +25,27 @@ class AnimalViewController: UIViewController {
         heightLabel.text        = animal?.height.description    // Cast fro float
         locationLabel.text      = animal?.location
         dateLastSeenLabel.text  = animal?.dateLastSeen
+        
+        imageView.url = animal?.imageURL
 
-        loadImage()
+//        loadImage()
 
         // Do any additional setup after loading the view.
     }
  
     func loadImage() {
         
-        if let url = self.animal?.imageURL {
-            let op = LoadAnimalOperation(animalUrl: url)
-            op.completionBlock =  ({
-                
-                NSOperationQueue.mainQueue().addOperationWithBlock{ () -> Void in
-                    self.imageView.image = UIImage(data: op.imgData!)
-                }
-                
-            })
-            let operationQueue = NSOperationQueue.mainQueue()
-            operationQueue.addOperation(op)
-        }
+//        if let url = self.animal?.imageURL {
+//            let op = LoadAnimalOperation(animalUrl: url)
+//            op.completionBlock =  ({
+//                
+//                NSOperationQueue.mainQueue().addOperationWithBlock{ () -> Void in
+//                    self.imageView.image = UIImage(data: op.imgData!)
+//                }
+//                
+//            })
+//            let operationQueue = NSOperationQueue.mainQueue()
+//            operationQueue.addOperation(op)
+//        }
     }
 }

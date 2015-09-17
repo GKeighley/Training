@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3198A0D11BA9F163001BCA77 /* LoadAnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3198A0D01BA9F163001BCA77 /* LoadAnimalOperation.swift */; settings = {ASSET_TAGS = (); }; };
+		3198A0D11BA9F163001BCA77 /* LoadAnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3198A0D01BA9F163001BCA77 /* LoadAnimalOperation.swift */; };
 		C7B7F8691BA778A200621E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8681BA778A200621E1E /* AppDelegate.swift */; };
 		C7B7F86E1BA778A200621E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B7F86C1BA778A200621E1E /* Main.storyboard */; };
 		C7B7F8701BA778A200621E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B7F86F1BA778A200621E1E /* Assets.xcassets */; };
 		C7B7F8731BA778A200621E1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B7F8711BA778A200621E1E /* LaunchScreen.storyboard */; };
 		C7B7F87E1BA778A200621E1E /* MySecondAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F87D1BA778A200621E1E /* MySecondAppTests.swift */; };
-		C7B7F88F1BA77B2300621E1E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F88E1BA77B2300621E1E /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C7B7F8911BA781B600621E1E /* ImaginaryAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8901BA781B600621E1E /* ImaginaryAnimal.swift */; settings = {ASSET_TAGS = (); }; };
-		C7B7F8931BA7882500621E1E /* AnimalsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8921BA7882500621E1E /* AnimalsLoader.swift */; settings = {ASSET_TAGS = (); }; };
-		C7B7F8951BA78B8800621E1E /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8941BA78B8800621E1E /* AnimalViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C7B7F8971BA88D6900621E1E /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = C7B7F8961BA88D6900621E1E /* Animals.json */; settings = {ASSET_TAGS = (); }; };
+		C7B7F88F1BA77B2300621E1E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F88E1BA77B2300621E1E /* TableViewController.swift */; };
+		C7B7F8911BA781B600621E1E /* ImaginaryAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8901BA781B600621E1E /* ImaginaryAnimal.swift */; };
+		C7B7F8931BA7882500621E1E /* AnimalsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8921BA7882500621E1E /* AnimalsLoader.swift */; };
+		C7B7F8951BA78B8800621E1E /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7F8941BA78B8800621E1E /* AnimalViewController.swift */; };
+		C7B7F8971BA88D6900621E1E /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = C7B7F8961BA88D6900621E1E /* Animals.json */; };
+		E370D30E1BAB3E15002CBE98 /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370D30D1BAB3E15002CBE98 /* TableViewControllerTests.swift */; };
+		E370D3141BAB4FE2002CBE98 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370D3131BAB4FE2002CBE98 /* URLImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		C7B7F8921BA7882500621E1E /* AnimalsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsLoader.swift; sourceTree = "<group>"; };
 		C7B7F8941BA78B8800621E1E /* AnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
 		C7B7F8961BA88D6900621E1E /* Animals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animals.json; sourceTree = SOURCE_ROOT; };
+		E370D30D1BAB3E15002CBE98 /* TableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
+		E370D3131BAB4FE2002CBE98 /* URLImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				C7B7F8921BA7882500621E1E /* AnimalsLoader.swift */,
 				C7B7F8961BA88D6900621E1E /* Animals.json */,
 				3198A0D01BA9F163001BCA77 /* LoadAnimalOperation.swift */,
+				E370D3131BAB4FE2002CBE98 /* URLImageView.swift */,
 			);
 			path = MySecondApp;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			children = (
 				C7B7F87D1BA778A200621E1E /* MySecondAppTests.swift */,
 				C7B7F87F1BA778A200621E1E /* Info.plist */,
+				E370D30D1BAB3E15002CBE98 /* TableViewControllerTests.swift */,
 			);
 			path = MySecondAppTests;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 		C7B7F85D1BA778A200621E1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Epocrates;
 				TargetAttributes = {
@@ -212,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E370D3141BAB4FE2002CBE98 /* URLImageView.swift in Sources */,
 				C7B7F8951BA78B8800621E1E /* AnimalViewController.swift in Sources */,
 				3198A0D11BA9F163001BCA77 /* LoadAnimalOperation.swift in Sources */,
 				C7B7F8691BA778A200621E1E /* AppDelegate.swift in Sources */,
@@ -226,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B7F87E1BA778A200621E1E /* MySecondAppTests.swift in Sources */,
+				E370D30E1BAB3E15002CBE98 /* TableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

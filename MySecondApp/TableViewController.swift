@@ -8,6 +8,9 @@
 
 import UIKit
 
+struct MyAnimalsLoader : AnimalsLoader {
+    var url:NSURL? = NSURL(string: "http://charliewilliams.org/SwiftBootcamp/Animals.json")
+}
 
 class TableViewController: UITableViewController {
 
@@ -15,7 +18,7 @@ class TableViewController: UITableViewController {
     
     required init?(coder aDecoder:NSCoder)
     {
-        animalsArray = AnimalsLoader().loadAnimals()
+        animalsArray = MyAnimalsLoader().loadAnimals()
         super.init(coder: aDecoder)
     }
     
