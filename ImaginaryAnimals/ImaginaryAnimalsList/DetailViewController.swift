@@ -8,6 +8,22 @@
 
 import UIKit
 
+class DownloadOperation : NSOperation{
+    var urlString:String
+//    var imageData:NSData
+    
+    init(url:String) {
+        urlString = url
+        super.init()
+    }
+    
+/*    override func main() {
+        imageData = NSData(contentsOfURL: urlString)
+    }
+  */
+}
+
+
 class DetailViewController: UIViewController {
 
     var dataIndex: NSInteger = 0
@@ -36,7 +52,21 @@ class DetailViewController: UIViewController {
             self.view.addSubview(activityIndicator)
             activityIndicator.startAnimating()
             
-            loadImageFromURL(url)
+            //loadImageFromURL(url)
+            let downloadOperation = NSBlockOperation(block:{() -> Void in
+            if let imageData = NSData(contentsOfURL: url) {
+                self.imageView.image = UIImage(data: imageData)
+                }
+            })
+            
+            
+            //NSOperationQueue.currentQueue()?.addOperation(downloadOperation)
+            let backgroundQueue = NSOperationQueue()
+            backgroundQueue.qualityOfService = NSQualityOfService.UserInitiated
+            backgroundQueue.addOperation(downloadOperation)
+            
+            
+            
 
         }
         // Do any additional setup after loading the view.
@@ -47,7 +77,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+  /*
     func loadImageFromURL(url: NSURL) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -58,6 +88,9 @@ class DetailViewController: UIViewController {
             })
         }
     }
+    */
+    
+    
 
     /*
     // MARK: - Navigation
